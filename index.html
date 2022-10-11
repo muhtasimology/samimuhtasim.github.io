@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name = "viewpoint" content="width-device-width, initial-scale-1.0">
+    <title>Sami Muhtasim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="/Sami Muhtasim-2.png" class="logo">
+            <ul>
+                <li> <a href="#">Home</a></li>
+                <li> <a href="#">About</a></li>
+                <li> <a href="#">Education</a></li>
+                <li> <a href="#">Experiences</a></li>
+                <li> <a href="#">Projects</a></li>
+                <li> <a href="#">ECA</a></li>
+                <li> <a href="#">Photos and Videos</a></li>
+                <li> <a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">.
+            <h1>Welcome to my <span>website!</span><br>I am an <span>electrical engineering graduate,</span><br>musician, techie, and a casual gamer.
+            </h1>
+        </div>            
+
+    </div>
+</div>
+
+<!---------about----------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="/portrait.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I was born and raised in Dhaka, Bangladesh. I have done my Bachelor of Science in Electrical and Electronic Engineering from BUET. My undergraduate thesis was on machine learning of time series dataset. <br>
+                    I have been involved in volunteering for the last four years. I have served as the General Secretary at IEEE BUET Student Branch.
+                    <br>I have been an active musician for quite some time now. My main instrument is the drums. I also play other percussions, guitar, and a little bit of keyboard. I have been playing with my band Oddity Spell since 2018.
+                    <br>I am an intermediate programmer an a novice hacker. 
+                    <br>Other than all these, I am a tech nerd and a casual gamer. I sometimes stream on my YouTube channel. </p>
+                   
+                   
+                    
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
+                        <p class="tab-links" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Volunteering and ECA')">Volunteering and ECA</p>
+                    </div>   
+                    
+                    <div class="tab-contents active-tab" id="Education">
+                        <ul>
+                            <li><span>Secondary School Certificate, 2014</span><br>Government Laboratory High School,<br>GPA: 5.00 (out of 5.00)</li>
+                            <li><span>Higher Secondary Certificate, 2016</span><br>Government Science College,<br>GPA: 5.00 (out of 5.00)</li>
+                            <li><span>Bachelor of Science, 2017-2022</span><br>Electrical and Electronic Engineering, <br>Bangladesh University of Engineering and Technology</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="tab-contents" id="Skills">
+                        <ul>
+                            <li><span>Machine Learning</span><br>Keras, Scikit-Learn, Pandas</li>
+                            <li><span>Internet of Things</span><br>LoRaWAN</li>
+                            <li><span>Embedded Systems</span><br>Arduino, ESP8266, STM32</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="Volunteering and ECA">
+                        <ul>
+                            <li><span>IEEE BUET Student Branch</span><br>General Secretary (2021-2022)</li>
+                            <li><span>Oddity Spell</span><br>Drummer (2018-Present)</li>
+                            <li><span>Murchhona, BUET</span><br>Stage Management Secretary (2021-2022)</li>
+                            <li><span>Bengali.ai</span><br>Trainee (2018-2019)</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname)
+    {
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+
+
+</body>
+</html>
